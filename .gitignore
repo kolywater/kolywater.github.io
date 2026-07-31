@@ -1,2 +1,5 @@
 
 .DS_Store
+
+# build artefact from the Squarespace-export migration
+imgmap.json
