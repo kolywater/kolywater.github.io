@@ -1,0 +1,15 @@
+/* Local overrides, loaded after the exported Squarespace stylesheets.
+   Keep site-specific tweaks here rather than editing the hash-named files,
+   which are regenerated from the export. */
+
+/* Card headlines ("Designing the future for phones, pads and Macs.") are
+   oversized on a phone. Below 768px the size comes from the viewport-HEIGHT
+   variant of the type scale -- calc((2.8 - 1) * 1.2vh + 1rem), so 35.44px at
+   a 900px-tall viewport -- while desktop uses the vw variant. Reproducing the
+   same expression at 0.75 gives a true 25% reduction that still scales with
+   viewport height. Line height is a unitless ratio and follows automatically. */
+@media (max-width: 767px) {
+  .image-subtitle h2 {
+    font-size: calc(((2.8 - 1) * 1.2vh + 1rem) * 0.75);
+  }
+}
